@@ -1,23 +1,33 @@
+int led1 = 2;
+int led2 = 3;
+int led3 = 4;
+int led4 = 5;
+int led5 = 6;
+int led6 = 7;
+
 void setup() {
-  for (int pino = 2; pino <= 7; pino++) {
-    pinMode(pino, OUTPUT);
-  }
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+  pinMode(led5, OUTPUT);
+  pinMode(led6, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(2, HIGH); 
-  digitalWrite(3, HIGH); 
-  digitalWrite(4, HIGH);
-  digitalWrite(5, LOW);  
-  digitalWrite(6, LOW);  
-  digitalWrite(7, LOW);
-  delay(500);
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led3, HIGH);
+  digitalWrite(led4, LOW);
+  digitalWrite(led5, LOW);
+  digitalWrite(led6, LOW);
+  delay(500); 
 
-  digitalWrite(2, LOW);  
-  digitalWrite(3, LOW);  
-  digitalWrite(4, LOW);
-  digitalWrite(5, HIGH); 
-  digitalWrite(6, HIGH); 
-  digitalWrite(7, HIGH);
-  delay(500);
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, LOW);
+  digitalWrite(led4, HIGH);
+  digitalWrite(led5, HIGH);
+  digitalWrite(led6, HIGH);
+  delay(500); 
 }
