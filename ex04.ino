@@ -1,13 +1,16 @@
+int pinoInicial = 2;
+int pinoFinal = 7;
+
 void setup() {
-  for (int pino = 2; pino <= 14; pino++) {
+  for (int pino = pinoInicial; pino <= pinoFinal; pino++) {
     pinMode(pino, OUTPUT);
   }
 }
 
 void loop() {
-  for (int pino = 2; pino <= 14; pino++) {
-    digitalWrite(pino, HIGH);
-    delay(300);
-    digitalWrite(pino, LOW);
+  for (int pino = pinoInicial; pino <= pinoFinal; pino++) {
+    digitalWrite(pino, HIGH); 
+    delay(200);              
+    digitalWrite(pino, LOW); 
   }
 }
