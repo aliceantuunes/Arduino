@@ -1,13 +1,15 @@
+int pinoLed = 13;
+
 void setup() {
-  pinMode(13, OUTPUT);      
+  pinMode(pinoLed, OUTPUT);
   Serial.begin(9600);     
 }
 
 void loop() {
-  digitalWrite(13, HIGH);   
-  Serial.println("Hello World!");
-  delay(1000);            
-  
-  digitalWrite(13, LOW);   
-  delay(1000);             
+  digitalWrite(pinoLed, HIGH);   
+  Serial.println("Hello World!"); 
+  delay(1000);                    
+
+  digitalWrite(pinoLed, LOW);   
+  delay(1000);                 
 }
