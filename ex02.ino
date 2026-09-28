@@ -1,10 +1,12 @@
+int pinoLed = 12;
+
 void setup() {
-  pinMode(12, OUTPUT); 
+  pinMode(pinoLed, OUTPUT); 
 }
 
 void loop() {
-  digitalWrite(12, HIGH);
-  delay(1000);           
-  digitalWrite(12, LOW); 
-  delay(1000);           
+  digitalWrite(pinoLed, HIGH); 
+  delay(1000);             
+  digitalWrite(pinoLed, LOW);
+  delay(1000);                
 }
