@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Desafio Final - SENAI CIMATEC Completo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 140, "left": 100, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -30, "left": 360, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btn1", "top": 200, "left": -80, "attrs": { "color": "red" } },
+    { "type": "wokwi-pushbutton", "id": "btn2", "top": 300, "left": -80, "attrs": { "color": "blue" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 250, "left": -20, "attrs": { "value": "10000" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 350, "left": -20, "attrs": { "value": "10000" } },
+    { "type": "wokwi-bulb", "id": "bulb1", "top": -120, "left": 520, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-bulb", "id": "bulb2", "top": 10, "left": 520, "attrs": { "color": "cyan" } }
+  ],
+  "connections": [
+    [ "uno:5V", "relay1:VCC", "red", [ "v0" ] ],
+    [ "uno:GND.1", "relay1:GND", "black", [ "v0" ] ],
+    [ "uno:7", "relay1:IN1", "green", [ "v0" ] ],
+    [ "uno:8", "relay1:IN2", "green", [ "v0" ] ],
+    [ "uno:5V", "btn1:1.VCC", "red", [ "v0" ] ],
+    [ "btn1:2.DOUT", "uno:2", "orange", [ "v0" ] ],
+    [ "btn1:2.DOUT", "r1:1", "orange", [ "v0" ] ],
+    [ "r1:2", "uno:GND.2", "black", [ "v0" ] ],
+    [ "uno:5V", "btn2:1.VCC", "red", [ "v0" ] ],
+    [ "btn2:2.DOUT", "uno:3", "purple", [ "v0" ] ],
+    [ "btn2:2.DOUT", "r2:1", "purple", [ "v0" ] ],
+    [ "r2:2", "uno:GND.2", "black", [ "v0" ] ],
+    [ "relay1:COM1", "uno:5V", "red", [ "h20", "v-80" ] ],
+    [ "relay1:NO1", "bulb1:L1", "red", [ "v0" ] ],
+    [ "bulb1:L2", "uno:GND.3", "black", [ "v20", "h-150" ] ],
+    [ "relay1:COM2", "uno:5V", "red", [ "h10", "v-60" ] ],
+    [ "relay1:NO2", "bulb2:L1", "red", [ "v0" ] ],
+    [ "bulb2:L2", "uno:GND.3", "black", [ "v20", "h-150" ] ]
+  ],
+  "dependencies": {}
+}
